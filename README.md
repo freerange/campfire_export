@@ -2,6 +2,8 @@
 
 A script for exporting Campfire room messages to CSV.
 
+It does a very small bit of monkey-patching of Tinder to make it work for rooms which have been "removed", which was my original use case.
+
 ## Dependencies
 
 * Bundler
