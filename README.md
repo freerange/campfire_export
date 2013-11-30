@@ -1,5 +1,3 @@
-# Campfire Export
-
 ## Description
 
 A script for exporting Campfire room messages to CSV.
