@@ -1,6 +1,7 @@
 require 'bundler/setup'
 require 'tinder'
 require 'dotenv'
+require 'csv'
 
 Dotenv.load
 
@@ -14,8 +15,13 @@ class << room
   end
 end
 
-date = Date.parse(ARGV[0])
-while date <= Date.today
-  puts room.transcript(date).select { |m| m.type == 'TextMessage' }.map { |m| [m.created_at, m.user.name, m.body].join("\t") }
-  date += 1
+CSV($stdout) do |csv|
+  csv << %w(id created_at user.name type body)
+  date = Date.parse(ARGV[0])
+  while date <= Date.today
+    room.transcript(date).each do |message|
+      csv << [message.id, message.created_at, message.user ? message.user.name : nil, message.type, message.body]
+    end
+    date += 1
+  end
 end
