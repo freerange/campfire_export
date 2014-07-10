@@ -31,7 +31,7 @@ It does a very small bit of monkey-patching of Tinder to make it work for rooms 
 
 ## Credits
 
-Pivotal Watcher was written by [James Mead](http://jamesmead.org) and the other members of [Go Free Range](http://gofreerange.com).
+Campfire Export was written by [James Mead](http://jamesmead.org) and the other members of [Go Free Range](http://gofreerange.com).
 
 ## License
 
