@@ -6,7 +6,7 @@ It does a very small bit of monkey-patching of Tinder to make it work for rooms 
 
 ## Dependencies
 
-* Ruby (only tested with 2.0.0p195)
+* Ruby (tested with v2.0.0p195 & v2.2.1p85)
 * Bundler
 * Tinder (in Gemfile)
 * Dotenv (in Gemfile)
